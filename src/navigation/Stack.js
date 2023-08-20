@@ -6,7 +6,7 @@ import Professional from '../screens/Professional'
 const Stack = createNativeStackNavigator()
 
 export default props => (
-  <Stack.Navigator initialRouteName='Home' screenOptions={{ headerShown: true }}>
+  <Stack.Navigator initialRouteName='Home' screenOptions={{ headerShown: false }}>
     <Stack.Screen name='Home' component={Home} />
     <Stack.Screen name='Professional' component={Professional} />
   </Stack.Navigator>
