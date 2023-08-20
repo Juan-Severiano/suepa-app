@@ -1,31 +1,25 @@
 import { StatusBar } from 'expo-status-bar';
 import { Component } from 'react';
-import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Dimensions, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Header from '../components/Header'
 import Card from '../components/ProfessionalCard'
+import professionals from '../professionals';
 
 export default class Home extends Component {
   render() {
     return (
       <>
         <Header />
-        {/* <View style={styles.container}>
-          <Text>SOEPA App</Text>
-          <Text>Sistema de Orientação nao sei oq lá para pais de autistas</Text>
-          <Text
-            onPress={() => {
-              this.props.navigation.navigate('Professional', {
-                title: 'asdasdasdasdasdasd'
-              })
-            }}
-          >
-            Clique aqui para ir para a tela do profissional
-          </Text>
-        </View> */}
-        <Text>Comece por aqui</Text>
-        <View style={styles.container}>
-          <Card navigation={this.props.navigation} />
-        </View>
+        <Text style={{ fontSize: 30, fontWeight: '800', marginLeft: 20 }}>Comece por aqui</Text>
+        <FlatList
+          numColumns={2}
+          data={professionals}
+          keyExtractor={item => `${item.id}`}
+          renderItem={({ item }) => {
+            return <Card id={item.id} navigation={this.props.navigation} {...item} />
+            }
+          }
+        />
       </>
     );
   }
@@ -34,8 +28,5 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
   },
 });

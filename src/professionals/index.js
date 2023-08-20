@@ -1,0 +1,86 @@
+export default [
+  {
+    id: 1,
+    name: 'Hernan Cortez',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed turpis in libero convallis rhoncus. Fusce vel efficitur tellus. Curabitur volutpat libero nec lacinia blandit.',
+    cover: require('../../assets/1.png'),
+    profession: 'Psicólogo',
+    localAtendimento: 'Clínica Tananan',
+    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    videoUrl: '../../gandalf.mp4',
+    instagram: '_juan.sev_',
+    number: '+5588988586931'
+  },
+  {
+    id: 2,
+    name: 'Alice Silva',
+    description: 'Amet consectetur adipiscing elit. Fusce vel efficitur tellus. Curabitur volutpat libero nec lacinia blandit. Vivamus non tellus quis neque dictum ultrices.',
+    cover: require('../../assets/2.png'),
+    profession: 'Nutricionista',
+    localAtendimento: 'NutriLife Consultório',
+    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    videoUrl: '../../gandalf.mp4',
+    instagram: 'alice.nutri',
+    number: '+5588988123456'
+  },
+  {
+    id: 3,
+    name: 'John Doe',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius sapien a porttitor. Fusce ullamcorper nulla nec nunc fringilla, quis venenatis erat elementum.',
+    cover: require('../../assets/3.png'),
+    profession: 'Advogado',
+    localAtendimento: 'Escritório de Advocacia',
+    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    videoUrl: '../../gandalf.mp4',
+    instagram: 'john_advogado',
+    number: '+5588988776655'
+  },
+  {
+    id: 4,
+    name: 'Maria Souza',
+    description: 'Amet consectetur adipiscing elit. Fusce vel efficitur tellus. Curabitur volutpat libero nec lacinia blandit. Vivamus non tellus quis neque dictum ultrices.',
+    cover: require('../../assets/1.png'),
+    profession: 'Terapeuta',
+    localAtendimento: 'Espaço Sereno',
+    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    videoUrl: '../../gandalf.mp4',
+    instagram: 'maria.terapeuta',
+    number: '+5588988345678'
+  },
+  {
+    id: 5,
+    name: 'Carlos Fernandes',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius sapien a porttitor. Fusce ullamcorper nulla nec nunc fringilla, quis venenatis erat elementum.',
+    cover: require('../../assets/2.png'),
+    profession: 'Fisioterapeuta',
+    localAtendimento: 'Clínica FisioFit',
+    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    videoUrl: '../../gandalf.mp4',
+    instagram: 'carlos_fisio',
+    number: '+5588988234567'
+  },
+  {
+    id: 6,
+    name: 'Julia Santos',
+    description: 'Amet consectetur adipiscing elit. Fusce vel efficitur tellus. Curabitur volutpat libero nec lacinia blandit. Vivamus non tellus quis neque dictum ultrices.',
+    cover: require('../../assets/3.png'),
+    profession: 'Psicóloga',
+    localAtendimento: 'Consultório Julia',
+    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    videoUrl: '../../gandalf.mp4',
+    instagram: 'julia_psico',
+    number: '+5588988567890'
+  },
+  {
+    id: 7,
+    name: 'Lucas Oliveira',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius sapien a porttitor. Fusce ullamcorper nulla nec nunc fringilla, quis venenatis erat elementum.',
+    cover: require('../../assets/1.png'),
+    profession: 'Coach',
+    localAtendimento: 'Espaço Transformar',
+    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    videoUrl: '../../gandalf.mp4',
+    instagram: 'lucas_coach',
+    number: '+5588988765432'
+  },
+]

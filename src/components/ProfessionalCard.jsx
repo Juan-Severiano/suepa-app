@@ -4,14 +4,12 @@ import { Image, StyleSheet, Text, TouchableOpacity, Linking } from 'react-native
 export default props => {
   return (
     <TouchableOpacity style={styles.card} onPress={() => {
-      props.navigation.navigate('Professional')
+      props.navigation.navigate('Professional', {...props})
     }}>
-      <Image style={styles.cardImage} source={require('../../assets/1.png')} />
-      <Text style={styles.profession}>Psicólogo</Text>
-      <Text style={styles.name}>Nome do Profissional</Text>
-      <Text style={styles.local} onPress={() => {
-        Linking.openURL('https://www.google.com/maps/@-9.5916075,-51.5495391,8z?entry=ttu')
-      }}>Local onde Atua</Text>
+      <Image style={styles.cardImage} source={props.cover} />
+      <Text style={styles.profession}>{props.profession}</Text>
+      <Text style={styles.name}>{props.name}</Text>
+      <Text style={styles.local}>{props.localAtendimento}</Text>
     </TouchableOpacity>
   )
 }
@@ -45,6 +43,7 @@ const styles = StyleSheet.create({
     fontWeight: '600'
   },
   local: {
-    color: '#0007'
+    color: '#0007',
+    fontSize: 11
   }
 });

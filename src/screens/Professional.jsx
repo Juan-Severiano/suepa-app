@@ -8,17 +8,18 @@ export default class Professional extends Component {
   back () {
     this.props.navigation.goBack()
   }
-
+  
   render() {
+    console.log(this.props)
     return (
       <View>
         <TouchableOpacity style={styles.buttom} onPress={() => {
           this.back()
         }}>
-          <Ionicons name='arrow-back' size={30} color='#000' />
+          <Ionicons name='arrow-back' size={30} color='#fff' />
         </TouchableOpacity>
         <Video
-          source={require('../../gandalf.mp4')} // Substitua pelo caminho do seu vídeo
+          source={require('../../gandalf.mp4')}
           rate={1.0}
           volume={1.0}
           isMuted={true}
@@ -27,18 +28,18 @@ export default class Professional extends Component {
           useNativeControls
           style={styles.video}
         />
-        <Text style={styles.name} >Nome do Profissional</Text>
+        <Text style={styles.name} >{this.props.route.params.name}</Text>
         <Text style={styles.local} onPress={() => {
-          Linking.openURL('https://www.google.com/maps/@-9.5916075,-51.5495391,8z?entry=ttu')
-        }}>Rua alguma coisa ai, N° 123, Bairro Qualquer, Amontada, CE</Text>
+          Linking.openURL(`${this.props.route.params.localAtendimentoUrl}`)
+        }}>{this.props.route.params.localAtendimento}</Text>
         <Text onPress={() => {
-          Linking.openURL('https://www.instagram.com/_juan.sev_/')
-        }} style={styles.socialMedia}>@teuinstagram</Text>
-        <Text style={styles.description}>Pra colocarem uma descrição bem boa aqui e chamar a atenção do povo</Text>
+          Linking.openURL(`https://www.instagram.com/${this.props.route.params.instagram}/`)
+        }} style={styles.socialMedia}>@{this.props.route.params.instagram}</Text>
+        <Text style={styles.description}>{ this.props.route.params.description }</Text>
         <Text style={styles.description}>Entre em contato com</Text>
         <Text onPress={() => {
-          Linking.openURL('https://wa.me/+5588988586931')
-        }} style={styles.number}>+55 (88) 988586931</Text>
+          Linking.openURL(`https://wa.me/${this.props.route.params.number}`)
+        }} style={styles.number}>{this.props.route.params.number}</Text>
       </View>
     )
   }
