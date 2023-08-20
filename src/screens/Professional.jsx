@@ -22,7 +22,7 @@ export default class Professional extends Component {
           source={require('../../gandalf.mp4')}
           rate={1.0}
           volume={1.0}
-          isMuted={true}
+          isMuted={false}
           resizeMode="cover"
           shouldPlay
           useNativeControls
