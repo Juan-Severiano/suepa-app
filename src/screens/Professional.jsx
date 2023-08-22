@@ -5,8 +5,10 @@ import Ionicons from '@expo/vector-icons/Ionicons'
 import { Video } from 'expo-av'
 
 export default class Professional extends Component {
+  state = {...this.props.route.params}
+
   back () {
-    this.props.navigation.goBack()
+    console.log('era pra voltar')
   }
   
   render() {
@@ -28,18 +30,18 @@ export default class Professional extends Component {
           useNativeControls
           style={styles.video}
         />
-        <Text style={styles.name} >{this.props.route.params.name}</Text>
+        <Text style={styles.name} >{this.state.name}</Text>
         <Text style={styles.local} onPress={() => {
-          Linking.openURL(`${this.props.route.params.localAtendimentoUrl}`)
-        }}>{this.props.route.params.localAtendimento}</Text>
+          Linking.openURL(`${this.state.localAtendimentoUrl}`)
+        }}>{this.state.localAtendimento}</Text>
         <Text onPress={() => {
-          Linking.openURL(`https://www.instagram.com/${this.props.route.params.instagram}/`)
-        }} style={styles.socialMedia}>@{this.props.route.params.instagram}</Text>
-        <Text style={styles.description}>{ this.props.route.params.description }</Text>
+          Linking.openURL(`https://www.instagram.com/${this.state.instagram}/`)
+        }} style={styles.socialMedia}>@{this.state.instagram}</Text>
+        <Text style={styles.description}>{this.state.description }</Text>
         <Text style={styles.description}>Entre em contato com</Text>
         <Text onPress={() => {
-          Linking.openURL(`https://wa.me/${this.props.route.params.number}`)
-        }} style={styles.number}>{this.props.route.params.number}</Text>
+          Linking.openURL(`https://wa.me/${this.state.number}`)
+        }} style={styles.number}>{this.state.number}</Text>
       </View>
     )
   }

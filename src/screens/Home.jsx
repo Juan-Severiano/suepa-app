@@ -11,15 +11,17 @@ export default class Home extends Component {
       <>
         <Header />
         <Text style={{ fontSize: 30, fontWeight: '800', marginLeft: 20 }}>Comece por aqui</Text>
-        <FlatList
-          numColumns={2}
-          data={professionals}
-          keyExtractor={item => `${item.id}`}
-          renderItem={({ item }) => {
-            return <Card id={item.id} navigation={this.props.navigation} {...item} />
+        <View style={{ flex: 1, alignItems: 'center', width: '100%' }}>
+          <FlatList
+            numColumns={2}
+            data={professionals}
+            keyExtractor={item => `${item.id}`}
+            renderItem={({ item }) => {
+              return <Card id={item.id} navigation={this.props.navigation} {...item} />
             }
-          }
-        />
+            }
+          />
+        </View>
       </>
     );
   }

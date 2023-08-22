@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/scea-logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.juansev.suepaapp"
     },
     "web": {
       "favicon": "./assets/scea-logo.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "88657bb6-08cb-4dd1-9632-ae62bd0fc5f5"
+      }
     }
   }
 }
