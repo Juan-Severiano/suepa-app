@@ -17,7 +17,12 @@ export default class Home extends Component {
             data={professionals}
             keyExtractor={item => `${item.id}`}
             renderItem={({ item }) => {
-              return <Card id={item.id} navigation={this.props.navigation} {...item} />
+              return (
+                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center' }} onPress={() => {
+                  this.props.navigation.navigate('Professional', {...item})
+                }}>
+                  <Card id={item.id} {...item} />
+                </TouchableOpacity>)
             }
             }
           />

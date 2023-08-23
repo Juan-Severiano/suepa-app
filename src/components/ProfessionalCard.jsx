@@ -1,16 +1,25 @@
 import { Dimensions } from 'react-native';
-import { Image, StyleSheet, Text, TouchableOpacity, Linking } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, Linking, View } from 'react-native';
 
 export default props => {
+  const toNext = () => {
+    props.navigationCard.navigate('Professional', { ...props })
+  }
+
   return (
-    <TouchableOpacity style={styles.card} onPress={() => {
-      props.navigation.navigate('Professional', {...props})
+    <View style={{
+      minHeight: Dimensions.get('window').width / 2.3,
+      width: Dimensions.get('window').width / 2.3,
+      backgroundColor: '#fff',
+      borderRadius: 20,
+      margin: 10,
+      padding: 10,
     }}>
       <Image style={styles.cardImage} source={props.cover} />
       <Text style={styles.profession}>{props.profession}</Text>
       <Text style={styles.name}>{props.name}</Text>
       <Text style={styles.local}>{props.localAtendimento}</Text>
-    </TouchableOpacity>
+    </View>
   )
 }
 

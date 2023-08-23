@@ -8,11 +8,10 @@ export default class Professional extends Component {
   state = {...this.props.route.params}
 
   back () {
-    console.log('era pra voltar')
+    this.props.navigation.navigate('Home')
   }
   
   render() {
-    console.log(this.props)
     return (
       <View>
         <TouchableOpacity style={styles.buttom} onPress={() => {
