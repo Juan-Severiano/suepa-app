@@ -5,12 +5,12 @@ import Ionicons from '@expo/vector-icons/Ionicons'
 import { Video } from 'expo-av'
 
 export default class Professional extends Component {
-  state = {...this.props.route.params}
+  state = { ...this.props.route.params }
 
-  back () {
+  back() {
     this.props.navigation.navigate('Home')
   }
-  
+
   render() {
     return (
       <View>
@@ -23,24 +23,41 @@ export default class Professional extends Component {
           source={require('../../gandalf.mp4')}
           rate={1.0}
           volume={1.0}
-          isMuted={false}
+          isMuted={true}
           resizeMode="cover"
           shouldPlay
           useNativeControls
           style={styles.video}
         />
         <Text style={styles.name} >{this.state.name}</Text>
-        <Text style={styles.local} onPress={() => {
-          Linking.openURL(`${this.state.localAtendimentoUrl}`)
-        }}>{this.state.localAtendimento}</Text>
-        <Text onPress={() => {
-          Linking.openURL(`https://www.instagram.com/${this.state.instagram}/`)
-        }} style={styles.socialMedia}>@{this.state.instagram}</Text>
-        <Text style={styles.description}>{this.state.description }</Text>
+        <View style={{ flexDirection: 'row', alignContent: 'center', alignItems: 'center', marginLeft: 20, marginTop: 10 }}>
+          <Ionicons name='compass-outline' size={27} color='#0007' onPress={() => {
+            Linking.openURL(`${this.state.localAtendimentoUrl}`)
+          }} />
+          <Text onPress={() => {
+            Linking.openURL(`${this.state.localAtendimentoUrl}`)
+          }} style={styles.local}>{this.state.localAtendimento}</Text>
+        </View>
+        <View style={{ flexDirection: 'row', alignContent: 'center', alignItems: 'center', marginLeft: 20, marginTop: 10 }} >
+          <Ionicons name='logo-instagram' size={25} color='#0007' onPress={() => {
+            Linking.openURL(`https://www.instagram.com/${this.state.instagram}/`)
+          }} />
+          <Text onPress={() => {
+            Linking.openURL(`https://www.instagram.com/${this.state.instagram}/`)
+          }} style={styles.socialMedia}>{this.state.instagram}</Text>
+        </View>
+        <Text style={styles.description}>{this.state.description}</Text>
         <Text style={styles.description}>Entre em contato com</Text>
-        <Text onPress={() => {
-          Linking.openURL(`https://wa.me/${this.state.number}`)
-        }} style={styles.number}>{this.state.number}</Text>
+        <View style={{ flexDirection: 'row', alignContent: 'center', alignItems: 'center', marginLeft: 20, marginTop: 10 }} >
+          <Ionicons name='call-outline' size={30} color='#000' onPress={() => {
+            Linking.openURL(`https://wa.me/${this.state.number}`)
+          }} />
+          <Text onPress={() => {
+            Linking.openURL(`https://wa.me/${this.state.number}`)
+          }} style={styles.number}>
+            {this.state.number}
+          </Text>
+        </View>
       </View>
     )
   }
@@ -69,15 +86,11 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     color: '#000',
   },
-  local:{
-    marginLeft: 20,
-    marginTop: 10,
+  local: {
     color: '#0007',
     fontSize: 17
   },
   socialMedia: {
-    marginLeft: 20,
-    marginTop: 10,
     fontSize: 20,
     color: '#0009',
   },
@@ -88,9 +101,7 @@ const styles = StyleSheet.create({
     color: '#000e',
   },
   number: {
-    marginLeft: 20,
     fontSize: 25,
-    marginTop: 10,
     color: '#000e',
   }
 })
