@@ -23,7 +23,7 @@ export default class Professional extends Component {
   back() {
     this.props.navigation.navigate('HomeScreen')
     this.setState({
-      initialState
+      ...initialState
     })
   }
 
@@ -36,7 +36,7 @@ export default class Professional extends Component {
           <Ionicons name='arrow-back' size={30} color='#fff' />
         </TouchableOpacity>
         <Video
-          source={require('../../gandalf.mp4')}
+          source={require(`../../assets/1.mp4`)}
           rate={1.0}
           volume={1.0}
           isMuted={true}

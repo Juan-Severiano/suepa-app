@@ -1,51 +1,51 @@
 export default [
   {
     id: 1,
-    name: 'Hernan Cortez',
+    name: 'Claudênia Alves de Lima Irineu',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed turpis in libero convallis rhoncus. Fusce vel efficitur tellus. Curabitur volutpat libero nec lacinia blandit.',
     cover: require('../../assets/1.png'),
-    profession: 'Psicólogo',
-    localAtendimento: 'Clínica Mama',
-    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    profession: 'Psicopedagoga',
+    localAtendimento: 'CLINICA INTEGRADA MICHELE SILVEIRA - CIMS ',
+    localAtendimentoUrl: 'https://www.google.com.br/maps/place/R.+Padre+Manoel+P.+de+Sousa,+548+-+Amontada,+CE,+62540-000/@-3.3614472,-39.8355405,17z/data=!3m1!4b1!4m6!3m5!1s0x7c1d2943079d4d1:0x8241cef2e622ca49!8m2!3d-3.3614472!4d-39.8329602!16s%2Fg%2F11csft2r5n?entry=ttu',
     videoUrl: '../../gandalf.mp4',
-    instagram: '_juan.sev_',
-    number: '+5588988586931'
+    instagram: 'psicopedagogaclaudeniaalves',
+    number: '+55 85 996341828'
   },
   {
     id: 2,
-    name: 'Alice Silva',
+    name: 'Tayná Moura Santana ',
     description: 'Amet consectetur adipiscing elit. Fusce vel efficitur tellus. Curabitur volutpat libero nec lacinia blandit. Vivamus non tellus quis neque dictum ultrices.',
     cover: require('../../assets/2.png'),
-    profession: 'Psiquiatra',
-    localAtendimento: 'Life Consultório',
-    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    profession: 'Nutricionista',
+    localAtendimento: 'Consultório odontológico Dr. Érica Barroso',
+    localAtendimentoUrl: 'https://www.google.com.br/maps/place/R.+Padre+Pedro+Vitorino,+919+-+Amontada,+CE,+62540-000/@-3.3609203,-39.8336225,17z/data=!3m1!4b1!4m6!3m5!1s0x7c1d296bfaa6d13:0x6fde6cab3e64cc9!8m2!3d-3.3609203!4d-39.8310422!16s%2Fg%2F11th_lb0qf?entry=ttu',
     videoUrl: '../../gandalf.mp4',
-    instagram: 'alice.nutri',
-    number: '+5588988123456'
+    instagram: 'taynamouranutricionista',
+    number: '+55 88 998400855'
   },
   {
     id: 3,
-    name: 'John Doe',
+    name: 'João Italo Madeira Nogueira ',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius sapien a porttitor. Fusce ullamcorper nulla nec nunc fringilla, quis venenatis erat elementum.',
     cover: require('../../assets/3.png'),
-    profession: 'Fono',
-    localAtendimento: 'Escritório de Fono',
-    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    profession: 'Psicólogo',
+    localAtendimento: 'Clínica Habilitar',
+    localAtendimentoUrl: 'https://www.google.com.br/maps/place/R.+Dom+Aureliano+Matos,+787+-+Coqueiro,+Itapipoca+-+CE,+62500-004/@-3.4957005,-39.5822303,17z/data=!3m1!4b1!4m6!3m5!1s0x7c048c555a8e259:0xb5b5f668505c857d!8m2!3d-3.4957005!4d-39.57965!16s%2Fg%2F11p0vd8wj9?entry=ttu',
     videoUrl: '../../gandalf.mp4',
-    instagram: 'john_advogado',
-    number: '+5588988776655'
+    instagram: 'italonogueirapsi',
+    number: '+55 88 994582112'
   },
   {
     id: 4,
-    name: 'Maria Souza',
+    name: 'Hebe Ribeiro',
     description: 'Amet consectetur adipiscing elit. Fusce vel efficitur tellus. Curabitur volutpat libero nec lacinia blandit. Vivamus non tellus quis neque dictum ultrices.',
     cover: require('../../assets/1.png'),
-    profession: 'Psicopedagogo',
-    localAtendimento: 'Espaço Sereno',
-    localAtendimentoUrl: 'https://www.google.com/maps/place/...',
+    profession: 'Fono',
+    localAtendimento: 'Clinica CIMS',
+    localAtendimentoUrl: 'https://www.google.com.br/maps/place/R.+Padre+Manoel+P.+de+Sousa,+548+-+Amontada,+CE,+62540-000/@-3.3614472,-39.8355405,17z/data=!3m1!4b1!4m6!3m5!1s0x7c1d2943079d4d1:0x8241cef2e622ca49!8m2!3d-3.3614472!4d-39.8329602!16s%2Fg%2F11csft2r5n?entry=ttu',
     videoUrl: '../../gandalf.mp4',
     instagram: 'maria.terapeuta',
-    number: '+5588988345678'
+    number: '+55(85)985630447'
   },
   {
     id: 5,

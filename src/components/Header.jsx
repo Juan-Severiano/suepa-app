@@ -13,7 +13,7 @@ export default class Header extends Component {
         <Image style={{
           maxHeight: 60,
           maxWidth: 60,
-        }} source={require('../../assets/scea-logo.png')} />
+        }} source={require('../../assets/soepa-logo.png')} />
       </View>
     )
   }
