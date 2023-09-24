@@ -61,8 +61,8 @@ const styles = StyleSheet.create({
     margin: 5
   },
   cardImg: {
-    height: Dimensions.get('window').width / 2,
-    width: Dimensions.get('window').width / 2,
+    height: Dimensions.get('window').width / 1.5,
+    width: Dimensions.get('window').width / 1.5,
     borderRadius: 20,
     marginHorizontal: 5,
     marginVertical: 5,
