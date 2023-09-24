@@ -6,6 +6,7 @@ import Professional from '../screens/Professional'
 import { NavigationContainer } from '@react-navigation/native'
 import Videos from '../screens/Videos'
 import { SafeAreaView } from 'react-native-safe-area-context'
+import Form from '../screens/form'
 
 const Tab = createBottomTabNavigator()
 
@@ -33,7 +34,7 @@ export default props => (
               ? 'add-circle'
               : 'add-circle-outline';
             break
-          case 'YourTasks':
+          case 'Form':
             iconName = focused
               ? 'grid'
               : 'grid-outline';
@@ -55,7 +56,7 @@ export default props => (
     <Tab.Screen name='HomeScreen' component={Home} options={{ tabBarLabel: 'home' }} />
     <Tab.Screen name='Professional' component={Professional} options={{ tabBarLabel: 'profissionais' }} />
     <Tab.Screen name='Videos' component={Videos} options={{ tabBarLabel: 'videos' }} />
-    <Tab.Screen name='HomeSceen' component={Home} options={{ tabBarLabel: 'home' }} />
+    <Tab.Screen name='Form' component={Form} options={{ tabBarLabel: 'home' }} />
 
 
   </Tab.Navigator>
