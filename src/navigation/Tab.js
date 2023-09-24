@@ -1,13 +1,16 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from '@expo/vector-icons/Ionicons'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Home from '../screens/Home'
 import Professional from '../screens/Professional'
 import { NavigationContainer } from '@react-navigation/native'
 import Videos from '../screens/Videos'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Form from '../screens/Form'
+import Stack from './Stack'
 
+const Stack2 = createNativeStackNavigator()
 const Tab = createBottomTabNavigator()
 
 export default props => (
@@ -60,6 +63,13 @@ export default props => (
 
 
   </Tab.Navigator>
+  <Stack2.Navigator initialRouteName='Home' screenOptions={{ headerShown: false }}>
+    <Stack2.Screen name='Home'>
+      {props => (
+        <Home navigationStack={props.navigation} />
+      )}
+    </Stack2.Screen>
+  </Stack2.Navigator>
   </NavigationContainer>
   </SafeAreaView>
 )

@@ -12,5 +12,6 @@ export default props => (
         <Home navigationStack={props.navigation} />
       )}
     </Stack.Screen>
+    <Stack.Screen name='Professional' component={Professional} />
   </Stack.Navigator>
 )
