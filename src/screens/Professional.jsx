@@ -4,11 +4,27 @@ import WebView from 'react-native-webview'
 import Ionicons from '@expo/vector-icons/Ionicons'
 import { Video } from 'expo-av'
 
+initialState = {
+    id: 1,
+    name: 'asd',
+    description: '',
+    cover: require('../../assets/1.png'),
+    profession: '',
+    localAtendimento: '',
+    localAtendimentoUrl: '',
+    videoUrl: '../../gandalf.mp4',
+    instagram: '',
+    number: '+5588999999999'
+  }
+
 export default class Professional extends Component {
   state = { ...this.props.route.params }
 
   back() {
-    this.props.navigation.navigate('Home')
+    this.props.navigation.navigate('HomeScreen')
+    this.setState({
+      initialState
+    })
   }
 
   render() {

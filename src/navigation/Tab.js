@@ -4,10 +4,13 @@ import Ionicons from '@expo/vector-icons/Ionicons'
 import Home from '../screens/Home'
 import Professional from '../screens/Professional'
 import { NavigationContainer } from '@react-navigation/native'
+import Videos from '../screens/Videos'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const Tab = createBottomTabNavigator()
 
 export default props => (
+  <SafeAreaView style={{ flex: 1 }}>
     <NavigationContainer>
   <Tab.Navigator
   onReady={console.log('tab', props)}
@@ -20,12 +23,12 @@ export default props => (
               ? 'ios-home'
               : 'ios-home-outline';
             break
-          case 'Filter':
+          case 'Professional':
             iconName = focused
               ? 'filter'
               : 'filter-outline';
             break
-          case 'Add':
+          case 'Videos':
             iconName = focused
               ? 'add-circle'
               : 'add-circle-outline';
@@ -50,8 +53,12 @@ export default props => (
     })}
  >
     <Tab.Screen name='HomeScreen' component={Home} options={{ tabBarLabel: 'home' }} />
+    <Tab.Screen name='Professional' component={Professional} options={{ tabBarLabel: 'profissionais' }} />
+    <Tab.Screen name='Videos' component={Videos} options={{ tabBarLabel: 'videos' }} />
+    <Tab.Screen name='HomeSceen' component={Home} options={{ tabBarLabel: 'home' }} />
 
 
   </Tab.Navigator>
   </NavigationContainer>
+  </SafeAreaView>
 )

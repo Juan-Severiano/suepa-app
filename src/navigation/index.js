@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 
 import Stack from './Stack'
 
-export default props => {
+export default () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationContainer>

@@ -9,7 +9,7 @@ export default props => (
   <Stack.Navigator initialRouteName='Home' screenOptions={{ headerShown: false }}>
     <Stack.Screen name='Home'>
       {props => (
-        <Home />
+        <Home navigationStack={props.navigation} />
       )}
     </Stack.Screen>
   </Stack.Navigator>
