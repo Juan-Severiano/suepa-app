@@ -1,7 +1,7 @@
 import { Dimensions, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View, FlatList, Linking } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Ionicons from '@expo/vector-icons/Ionicons'
-import professionals from '../professionals'
+import youtubeVideos from '../youtube-videos'
 
 export default props => {
   return (
@@ -24,7 +24,7 @@ export default props => {
       <SafeAreaView style={{ flex: 1, backgroundColor: '#eee' }}>
         <View style={{ marginTop: 50 }}>
           <FlatList
-            data={professionals}
+            data={youtubeVideos}
             keyExtractor={item => `${item.id}`}
             renderItem={({ item }) => {
               return (

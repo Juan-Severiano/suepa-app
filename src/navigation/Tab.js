@@ -6,7 +6,7 @@ import Professional from '../screens/Professional'
 import { NavigationContainer } from '@react-navigation/native'
 import Videos from '../screens/Videos'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import Form from '../screens/form'
+import Form from '../screens/Form'
 
 const Tab = createBottomTabNavigator()
 
