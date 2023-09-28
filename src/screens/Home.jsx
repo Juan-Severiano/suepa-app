@@ -4,12 +4,13 @@ import { Dimensions, FlatList, Image, StyleSheet, Text, TouchableOpacity, View }
 import Header from '../components/Header'
 import Card from '../components/ProfessionalCard'
 import professionals from '../professionals';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default class Home extends Component {
   render() {
     console.log(this.props)
     return (
-      <>
+      <SafeAreaView>
         <Header />
         <Text style={{ fontSize: 30, fontWeight: '800', marginLeft: 20 }}>Comece por aqui</Text>
         <View style={{ flex: 1, alignItems: 'center', width: '100%' }}>
@@ -28,7 +29,7 @@ export default class Home extends Component {
             }
           />
         </View>
-      </>
+      </SafeAreaView>
     );
   }
 }

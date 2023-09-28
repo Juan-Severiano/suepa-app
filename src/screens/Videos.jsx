@@ -6,21 +6,6 @@ import youtubeVideos from '../youtube-videos'
 export default props => {
   return (
     <>
-      <TouchableOpacity style={{
-        padding: 10,
-        backgroundColor: '#0001',
-        width: 50,
-        height: 50,
-        borderRadius: 50,
-        marginLeft: 10,
-        marginTop: 10,
-        position: 'absolute',
-        zIndex: 5
-      }} onPress={() => {
-        props.navigation.goBack()
-      }}>
-        <Ionicons name='arrow-back' size={30} color='#fff' />
-      </TouchableOpacity>
       <SafeAreaView style={{ flex: 1, backgroundColor: '#eee' }}>
         <View style={{ marginTop: 50 }}>
           <FlatList
