@@ -1,16 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
 import { Component } from 'react';
-import { Dimensions, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Header from '../components/Header'
 import Card from '../components/ProfessionalCard'
 import professionals from '../professionals';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Ionicons from '@expo/vector-icons/Ionicons'
+import youtubeVideos from '../youtube-videos';
 
 export default class Home extends Component {
   render() {
-    console.log(this.props)
     return (
-      <SafeAreaView>
+      <SafeAreaView style={{ flex: 1 }}>
         <Header />
         <Text style={{ fontSize: 30, fontWeight: '800', marginLeft: 20 }}>Comece por aqui</Text>
         <View style={{ flex: 1, alignItems: 'center', width: '100%' }}>

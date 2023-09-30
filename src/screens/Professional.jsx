@@ -8,7 +8,7 @@ initialState = {
     id: 1,
     name: 'asd',
     description: '',
-    cover: require('../../assets/1.png'),
+    cover: require('../../assets/4.png'),
     profession: '',
     localAtendimento: '',
     localAtendimentoUrl: '',
